@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Camera Refresh</title>
+</head>
+<body>
+
+<h2>Live Image Test (500ms refresh)</h2>
+
+<img id="cam" width="400">
+
+<script>
+function refreshImage() {
+  document.getElementById("cam").src =
+    "https://picsum.photos/400?t=" + new Date().getTime();
+}
+
+// refresh every 500ms
+setInterval(refreshImage, 500);
+
+// load first image immediately
+refreshImage();
+</script>
+
+</body>
+</html>
