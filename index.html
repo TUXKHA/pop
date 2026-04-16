@@ -5,20 +5,19 @@
 </head>
 <body>
 
-<h2>Live Image Test (500ms refresh)</h2>
+<h2>Live Image Test</h2>
 
-<img id="cam" width="400">
+<img id="cam" width="100%">
 
 <script>
 function refreshImage() {
   document.getElementById("cam").src =
-    "https://picsum.photos/400?t=" + new Date().getTime();
+    "https://placehold.co/400x300?text=Camera&t=" + new Date().getTime();
 }
 
-// refresh every 500ms
-setInterval(refreshImage, 500);
+// slower refresh (important for Blynk)
+setInterval(refreshImage, 1000);
 
-// load first image immediately
 refreshImage();
 </script>
 
